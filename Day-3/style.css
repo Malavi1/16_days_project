@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: black;    
+}
+.btn{
+    text-decoration: none;
+    font-family:'Edu NSW ACT Foundation', cursive;
+    background-color: white;
+    padding: 40px 80px;
+    border-radius: 5px;
+    color: rgb(44, 33, 33);
+    box-shadow: 1px 1px 10px rgb(250, 250, 250);
+    letter-spacing: 2px;
+    font-size:40px;
+    position: relative;
+    overflow: hidden;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    background-color: rgb(237, 0, 0);
+    width: 0px;
+    height:0px;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: width .5s, height 0.5s;    
+}
+.btn:hover::before{
+    width: 700px;
+    height: 700px;
+}
+.btn span{
+   position: relative;
+   z-index: 1; 
+}
